@@ -5,6 +5,7 @@ import Container from "./components/Container/Container";
 import Form from "./components/Form/Form";
 import SubContainer from "./components/SubContainer/SubContainer";
 import { search } from "./actions/codes";
+import Loading from "./components/Loading/Loading";
 
 function App() {
 	const dispatch = useDispatch();
@@ -21,7 +22,11 @@ function App() {
 		setInput(e.target.value);
 	};
 
-	return (
+	const loading = useSelector((state) => state.codes.loading);
+
+	return loading ? (
+		<Loading />
+	) : (
 		<Container>
 			<Form handleChange={handleChange} input={input} />
 			<SubContainer input={input} />
