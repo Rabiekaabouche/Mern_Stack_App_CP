@@ -12,7 +12,7 @@ app.use(cors());
 app.use("/", codeRouter);
 
 const CONNECTION_URL =
-	"mongodb+srv://rabiekaabouche:hibasaadrabie@cluster0.ruwtz.mongodb.net/code-postaux?retryWrites=true&w=majority";
+	"mongodb+srv://publicuser:123123123@cluster0.ruwtz.mongodb.net/code-postaux?retryWrites=true&w=majority";
 
 const PORT = process.env.PORT || 5000;
 mongoose
