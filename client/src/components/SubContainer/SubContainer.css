@@ -1,0 +1,13 @@
+.subContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	/* height: calc(100% - 110px); */
+	margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+	.subContainer {
+		flex-direction: column;
+	}
+}
